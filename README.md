@@ -1,38 +1,54 @@
-System Architecture
+1️⃣ Project Title
 
+Resume RAG System using Endee Vector Database
 
+2️⃣ Problem Statement
 
-The resume PDF is read and split into text chunks
+Recruiters and systems struggle to query resumes intelligently. This project builds a Retrieval-Augmented Generation (RAG) system that allows natural language querying over resume data using vector search.
 
+3️⃣ Architecture Flow
 
+User Question
+      ↓
+SentenceTransformer Embedding
+      ↓
+Query sent to Endee Vector DB
+      ↓
+Top Matching Resume Chunks Retrieved
+      ↓
+Context passed to LLM
+      ↓
+Final Answer Generated
 
-Each chunk is converted into embeddings using Sentence Transformers
+4️⃣ Tech Stack
 
+Python
+SentenceTransformers (all-MiniLM-L6-v2)
+Endee Vector Database
+FastAPI (if used in app.py)
+Requests
+PyPDF
 
+5️⃣ How to Run
+# Clone repo
+git clone https://github.com/AasthaSharma1809/resume-rag-endee.git
+cd resume-rag-endee
 
-Embeddings are stored in the Endee vector database
+# Create venv
+python -m venv venv
+venv\Scripts\activate
 
+# Install dependencies
+pip install -r requirements.txt
 
+# Start Endee server separately
 
-User asks a question
+# Ingest resume
+python ingest.py
 
+# Start app
+python app.py
 
-
-The question is converted into an embedding
-
-
-
-Endee performs semantic similarity search
-
-
-
-Top matching resume chunks are sent to the language model
-
-
-
-The model generates a final answer
-
-
-
-This pipeline demonstrates Retrieval Augmented Generation (RAG).
-
+6️⃣ Example Query
+Question: What are my technical skills?
+Answer: Python, Machine Learning, Data Structures, etc.
