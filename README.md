@@ -52,3 +52,13 @@ python app.py
 6️⃣ Example Query
 Question: What are my technical skills?
 Answer: Python, Machine Learning, Data Structures, etc.
+
+🎯 Use Case: Resume Semantic Search & RAG
+This project demonstrates how vector databases can power intelligent resume querying systems for:
+AI Resume Screening
+HR Tech Platforms
+Smart Candidate Search
+Context-Aware Resume Q&A
+
+This project uses Endee as the core vector database to store and retrieve high-dimensional embeddings for semantic search and RAG-based question answering.
+
