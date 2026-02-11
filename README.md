@@ -58,6 +58,16 @@ pip install -r requirements.txt
 
 python ingest.py
 
+OUTPUT:
+
+Total Chunks: 2
+
+Status: 200
+
+Status: 200
+
+Ingestion Complete!
+
 # Start app
 
 python app.py
